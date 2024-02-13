@@ -5,12 +5,13 @@ const daiAddress = "dai.tokens.ethers.eth";
 var walletDetails =[]
 
 // connect to ganache
-async function sendingTransaction(signer){
-    const txt = signer.sendingTransaction({
-        to: "ox",
+async function sendingTransaction(signer ,address){
+    const txt = signer.sendTransaction({
+        to: address,
         value: ethers.parseEther("1")
 
     })
+    return txt;
 
 
 }
@@ -29,6 +30,8 @@ const blockNumber = await providers.getBlockNumber()
 
 const {privateKey,publicKey,mnemonic} = await CreateWallet()
 walletDetails.push({"privateKey":privateKey,"publicKey":publicKey,"mnemonic":mnemonic})
+
+
 
 //const balance = await providers.getBalance()
 //const address = await providers._getAddress()
