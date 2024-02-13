@@ -1,26 +1,16 @@
 const {ethers,Wallet} = require("ethers")
 
+const CreateWallet = require("./Wallet/wallet")
+const sendingTransaction = require("./Transaction/sendTransaction")
+
 const daiAddress = "dai.tokens.ethers.eth";
 
 var walletDetails =[]
 
 // connect to ganache
-async function sendingTransaction(signer ,address){
-    const txt = signer.sendTransaction({
-        to: address,
-        value: ethers.parseEther("1")
-
-    })
-    return txt;
 
 
-}
 
-async function CreateWallet(){
-    const  wallet = Wallet.createRandom()
-    
-    return {privateKey:wallet.privateKey,publicKey:wallet.publicKey,mnemonic:wallet.mnemonic}
-}
 
 async function getSigener(){
 
@@ -33,8 +23,6 @@ walletDetails.push({"privateKey":privateKey,"publicKey":publicKey,"mnemonic":mne
 
 
 
-//const balance = await providers.getBalance()
-//const address = await providers._getAddress()
 
 
 console.log("dai tokens",providers._getConnection());
