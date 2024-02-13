@@ -1,0 +1,16 @@
+{
+  "name": "ethers",
+  "version": "1.0.0",
+  "description": "master ethers v6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "lemon",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^6.11.0",
+    "nodemon": "^3.0.3"
+  }
+}
