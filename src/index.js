@@ -67,10 +67,12 @@ async function AbiEncoder(){
 }
 
 async function constant(){
-  const maxuint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffn;
+  const minint256 = ethers.MinInt256;
 
-  const length = maxuint256.length;
-  console.log(length)
+  
+  console.log("minInt256",minint256)
+
+  
 
   const zeroAddress = ethers.ZeroAddress;
   console.log("addressmzero:",zeroAddress)
@@ -78,6 +80,9 @@ async function constant(){
   const zeroHash = ethers.ZeroHash;
 
   console.log("zero Hash:",zeroHash)
+
+  const weiPerEther = ethers.WeiPerEther;
+  console.log("weiPerEther: ",weiPerEther)
 
 
 }
