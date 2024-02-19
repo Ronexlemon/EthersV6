@@ -40,6 +40,8 @@ async function signMessage(){
 
 
 
+
+
     const message= 'Sign into tet.com'
 
     const sig = await signer.signMessage(message)
@@ -49,6 +51,17 @@ async function signMessage(){
   console.log("verification: ",verification)
 }
 
-signMessage()
+//signMessage()
 
 //getSigener()
+async function AbiEncoder(){
+  const v2= ethers.getAddress(address1)
+  const v3= ethers.getCreateAddress({from : address1,nonce:3})
+  const data = ["ronex"]
+  //const value = ethers.AbiCoder.defaultAbiCoder().encode(data);
+  //const value2 = ethers.AbiCoder.decode(data)
+  console.log(v2)
+  console.log(v3)
+}
+
+AbiEncoder()
