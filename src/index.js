@@ -5,6 +5,7 @@ const sendingTransaction = require("./Transaction/sendTransaction")
  const { privateKey:key, publicKey, mnemonic ,publicKey1,address1, privateKey} = require("./Constants/address")
  const {constant} = require("./Ether-Constant.js/constant")
  const {Cryptography} = require("./cryptograpyFunctions/functions")
+ const {password} = require("./cryptograpyFunctions/passwords")
 
 const daiAddress = "dai.tokens.ethers.eth";
 
@@ -73,3 +74,4 @@ async function AbiEncoder(){
 AbiEncoder()
 constant()
 Cryptography()
+password()
