@@ -66,4 +66,17 @@ async function AbiEncoder(){
   console.log(v4)
 }
 
+async function constant(){
+  const maxuint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffn;
+
+  const length = maxuint256.length;
+  console.log(length)
+
+  const zeroAddress = ethers.ZeroAddress;
+  console.log("addressmzero:",zeroAddress)
+
+
+}
+
 AbiEncoder()
+constant()
