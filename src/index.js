@@ -75,6 +75,10 @@ async function constant(){
   const zeroAddress = ethers.ZeroAddress;
   console.log("addressmzero:",zeroAddress)
 
+  const zeroHash = ethers.ZeroHash;
+
+  console.log("zero Hash:",zeroHash)
+
 
 }
 
