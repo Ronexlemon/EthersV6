@@ -1,8 +1,8 @@
-const {ethers,Wallet} = require("ethers")
+const {ethers,Wallet, verifyMessage} = require("ethers")
 
 const CreateWallet = require("./Wallet/wallet")
 const sendingTransaction = require("./Transaction/sendTransaction")
- const { privateKey:key, publicKey, mnemonic ,publicKey1,address1} = require("./Constants/address")
+ const { privateKey:key, publicKey, mnemonic ,publicKey1,address1, privateKey} = require("./Constants/address")
 
 const daiAddress = "dai.tokens.ethers.eth";
 
@@ -34,6 +34,19 @@ console.log("get signer",signer)
 console.log("block Number:",blockNumber)
 console.log(`New Wallet Generated : privateKey: ${privateKey} , publicKey: ${publicKey} and seedphrase ${mnemonic.phrase} , address ${address}`)
 }
+async function signMessage(){
+    const signer =new  Wallet(privateKey)
 
 
-getSigener()
+    const message= 'Sign into tet.com'
+
+    const sig = await signer.signMessage(message)
+    console.log("signature: ",sig)
+
+  const verification =  verifyMessage(message,sig)
+  console.log("verification: ",verification)
+}
+
+signMessage()
+
+//getSigener()
