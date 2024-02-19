@@ -3,6 +3,7 @@ const {ethers,Wallet, verifyMessage} = require("ethers")
 const CreateWallet = require("./Wallet/wallet")
 const sendingTransaction = require("./Transaction/sendTransaction")
  const { privateKey:key, publicKey, mnemonic ,publicKey1,address1, privateKey} = require("./Constants/address")
+ const {constant} = require("./Ether-Constant.js/constant")
 
 const daiAddress = "dai.tokens.ethers.eth";
 
@@ -66,32 +67,7 @@ async function AbiEncoder(){
   console.log(v4)
 }
 
-async function constant(){
-  const minint256 = ethers.MinInt256;
 
-  const maxint256 = ethers.MaxInt256;
-  
-  console.log("minInt256",minint256)
-  console.log("maxmum int",maxint256)
-
-
-  const maxuint256 = ethers.MaxUint256;
-  console.log("maxmum uint:",maxuint256)
-
-
-
-  const zeroAddress = ethers.ZeroAddress;
-  console.log("addressmzero:",zeroAddress)
-
-  const zeroHash = ethers.ZeroHash;
-
-  console.log("zero Hash:",zeroHash)
-
-  const weiPerEther = ethers.WeiPerEther;
-  console.log("weiPerEther: ",weiPerEther)
-
-
-}
 
 AbiEncoder()
 constant()
