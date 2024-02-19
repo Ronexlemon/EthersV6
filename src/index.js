@@ -36,6 +36,8 @@ console.log(`New Wallet Generated : privateKey: ${privateKey} , publicKey: ${pub
 }
 async function signMessage(){
     const signer =new  Wallet(privateKey)
+   
+
 
 
     const message= 'Sign into tet.com'
